@@ -1,0 +1,9 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:real="http://real-estate-agency">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <real:getAgentRequest>
+            <real:name>Mariya</real:name>
+        </real:getAgentRequest>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

@@ -1,29 +1,30 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://spring.io/guides/gs-producing-web-service"
-           targetNamespace="http://spring.io/guides/gs-producing-web-service"
-           elementFormDefault="qualified">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://real-estate-agency"
+            xmlns:real="http://real-estate-agency"
+            elementFormDefault="qualified">
 
-    <xs:element name="getAgentRequest">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xsd:element name="getAgentRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="name" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 
-    <xs:element name="getAgentResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="agent" type="tns:agent"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xsd:element name="getAgentResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="agent" type="agent"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
 
-    <xs:complexType name="agent">
-        <xs:sequence>
-            <xs:element name="id" type="xs:int"/>
-            <xs:element name="name" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xsd:complexType name="agent">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
 
-</xs:schema>
+</xsd:schema>

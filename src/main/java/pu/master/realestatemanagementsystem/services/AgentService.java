@@ -1,35 +1,36 @@
 package pu.master.realestatemanagementsystem.services;
 
 
-import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import pu.master.realestatemanagementsystem.models.entities.Agent;
+import pu.master.realestatemanagementsystem.repositories.AgentRepository;
 
 
 @Service
 public class AgentService
 {
 
-    private static final List<Agent> agents = new ArrayList<>();
+    private final AgentRepository agentRepository;
 
 
-    static
+    @Autowired
+    public AgentService(final AgentRepository agentRepository)
     {
-        agents.add(new Agent("1", "Pesho"));
-        agents.add(new Agent("2", "Gosho"));
+        this.agentRepository = agentRepository;
     }
 
-
-    public boolean addAgent(final Agent agent)
+    public Agent getAgentByName(final String name)
     {
-        return agents.add(agent);
+        return this.agentRepository.getAgents().get(name);
     }
 
 
     public List<Agent> getAllAgents()
     {
-        return agents;
+        return this.agentRepository.getAgents().values().stream().toList();
     }
-
 }
