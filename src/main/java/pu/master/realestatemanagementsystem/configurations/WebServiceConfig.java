@@ -18,7 +18,6 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter
 {
-
     @Bean
     public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(final ApplicationContext applicationContext)
     {
@@ -28,22 +27,20 @@ public class WebServiceConfig extends WsConfigurerAdapter
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
-
     @Bean(name = "agent")
     public DefaultWsdl11Definition defaultWsdl11Definition(final XsdSchema agentSchema)
     {
         final DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("AgentPort");
-        wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("");
         wsdl11Definition.setSchema(agentSchema);
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setPortTypeName("AgentServicePort");
+        wsdl11Definition.setTargetNamespace("http://real-estate-agency");
         return wsdl11Definition;
     }
-
 
     @Bean
     public XsdSchema agentSchema()
     {
-        return new SimpleXsdSchema(new ClassPathResource("xsds/agents.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("agents.xsd"));
     }
 }
