@@ -64,6 +64,34 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sources>
+						<source>${project.basedir}/src/main/resources/xsds/agents.xsd</source>
+					</sources>
+
+<!--					<schemaDirectory>-->
+<!--						${project.basedir}/src/main/resources/xsds/agents.xsd-->
+<!--					</schemaDirectory>-->
+					<outputDirectory>
+						${project.basedir}/src/main/java/pu/master/realestatemanagementsystem/configurations
+					</outputDirectory>
+<!--					<clearOutputDir>-->
+<!--						false-->
+<!--					</clearOutputDir>-->
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
