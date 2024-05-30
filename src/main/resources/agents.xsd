@@ -15,7 +15,7 @@
     <xsd:element name="getAgentResponse">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="agent" type="agent"/>
+                <xsd:element name="agent" type="real:agent"/>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>

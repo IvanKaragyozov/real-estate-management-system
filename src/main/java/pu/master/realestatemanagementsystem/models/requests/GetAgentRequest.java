@@ -25,13 +25,11 @@ import jakarta.xml.bind.annotation.XmlType;
  * &lt;/complexType&gt;
  * </pre>
  */
+@XmlRootElement(namespace = "http://real-estate-agency", name = "getAgentRequest")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"name"})
-@XmlRootElement(name = "getAgentRequest")
 public class GetAgentRequest {
-
-    @XmlElement(required = true)
-    protected String name;
+    @XmlElement(namespace = "http://real-estate-agency")
+    private String name;
 
     public String getName() {
         return name;
