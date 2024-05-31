@@ -5,6 +5,11 @@ import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 
 /**
@@ -25,35 +30,27 @@ import jakarta.xml.bind.annotation.XmlType;
  * &lt;/complexType&gt;
  * </pre>
  */
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "agent", propOrder = {"id", "name"})
+@XmlType(name = "agent", propOrder = {"id", "name", "age", "phoneNumber"})
 public class Agent {
+
 
     protected int id;
 
     @XmlElement(required = true)
     protected String name;
 
-    public Agent() {}
+    @XmlElement(required = true)
+    protected int age;
 
-    public Agent(final int id, final String name) {
-        this.id = id;
-        this.name = name;
-    }
+    @XmlElement(required = true)
+    protected String phoneNumber;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int value) {
-        this.id = value;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String value) {
-        this.name = value;
-    }
 }

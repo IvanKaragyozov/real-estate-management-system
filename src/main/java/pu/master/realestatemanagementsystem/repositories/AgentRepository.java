@@ -17,11 +17,11 @@ public class AgentRepository
     @PostConstruct
     public void populateData()
     {
-        agents.put("Tony", new Agent(1, "Tony"));
-        agents.put("Georgy", new Agent(2, "Georgy"));
-        agents.put("Emil", new Agent(3, "Emil"));
-        agents.put("Mariya", new Agent(4, "Mariya"));
-        agents.put("Pesho", new Agent(5, "Pesho"));
+        agents.put("Tony", new Agent(1, "Tony", 18, "+359 08569102"));
+        agents.put("Georgy", new Agent(2, "Georgy", 29, "0898 12 972"));
+        agents.put("Emil", new Agent(3, "Emil", 32, "+359 089934045"));
+        agents.put("Mariya", new Agent(4, "Mariya", 24, "0888404501"));
+        agents.put("Pesho", new Agent(5, "Pesho", 21, "0885116521"));
     }
 
     public Map<String, Agent> getAgents()

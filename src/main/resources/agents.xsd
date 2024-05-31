@@ -24,6 +24,8 @@
         <xsd:sequence>
             <xsd:element name="id" type="xsd:int"/>
             <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="age" type="xsd:int"/>
+            <xsd:element name="phoneNumber" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
 
