@@ -39,7 +39,7 @@ public class ClientApplication
             }
             else
             {
-                System.out.println("No data found for agent: " + name);
+                System.out.println("Agent with name [" + name + "] not found");
             }
         };
     }
