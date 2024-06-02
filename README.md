@@ -12,14 +12,14 @@ To retrieve the WSDL file from the service, you can use the following URL:
 http://localhost:8091/ws/real-estate.wsdl
 
 It is expected to see the following:  
-![Screenshot](service/src/main/resources/imageswsdl-example.png)
+![Screenshot](service/src/main/resources/images/wsdl-example.png)
 
 **SOAP Client Documentation**  
 The client can be started by running the main method located in the 'ClientApplication' class
 or by running 'mvn spring-boot:run'.  
 
 After the client is started, you will be promted to enter an agent name or type 'Exit' to exit the application.
-![Screenshot](service/src/main/resources/imagesget-agent-example-console.png)
+![Screenshot](service/src/main/resources/images/get-agent-example-console.png)
 
 
 Note: You can still send requests using the service only with the following way:  
