@@ -5,8 +5,8 @@
 // Generated on: 2024.06.02 at 01:12:40 PM EEST 
 //
 
-
 package realestateagency.service.models;
+
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -18,6 +18,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Setter
 @Getter
 @NoArgsConstructor
@@ -25,8 +26,8 @@ import lombok.Setter;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "agent", propOrder = {"id", "name", "age", "phoneNumber"})
-public class Agent {
-
+public class Agent
+{
 
     protected int id;
 
@@ -41,7 +42,8 @@ public class Agent {
 
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         StringBuilder sb = new StringBuilder();
         sb.append("╔═══════════╦═════════════╦═════════╦═════════════════╗\n");
         sb.append(String.format("║ %-10s║ %-12s║ %-8s║ %-16s║\n", "ID", "Name", "Age", "Phone Number"));

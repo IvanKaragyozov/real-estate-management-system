@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import realestateagency.client.configurations.SoapClient;
+import realestateagency.client.presenters.AgentPresenter;
 import realestateagency.service.models.GetAgentResponse;
 
 
@@ -22,25 +23,5 @@ public class ClientApplication
     }
 
 
-    @Bean
-    CommandLineRunner lookup(final SoapClient soapClient)
-    {
 
-        return args -> {
-            final Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter the name of the agent: ");
-            final String name = scanner.nextLine();
-            scanner.close();
-
-            final GetAgentResponse response = soapClient.getAgent(name);
-            if (response != null && response.getAgent() != null)
-            {
-                System.out.println(response.getAgent());
-            }
-            else
-            {
-                System.out.println("Agent with name [" + name + "] not found");
-            }
-        };
-    }
 }

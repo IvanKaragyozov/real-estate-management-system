@@ -5,7 +5,6 @@
 // Generated on: 2024.06.02 at 01:12:40 PM EEST 
 //
 
-
 package realestateagency.service.models;
 
 
@@ -29,10 +28,10 @@ import lombok.Setter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(namespace = "http://real-estate-agency", name = "", propOrder = {"agent"})
 @XmlRootElement(namespace = "http://real-estate-agency", name = "getAgentResponse")
-public class GetAgentResponse {
+public class GetAgentResponse
+{
 
     @XmlElement(namespace = "http://real-estate-agency")
     protected Agent agent;
-
 
 }

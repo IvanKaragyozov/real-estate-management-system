@@ -5,58 +5,61 @@
 // Generated on: 2024.06.02 at 01:12:40 PM EEST 
 //
 
-
 package realestateagency.service.models;
+
 
 import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the real_estate_agency package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
+ * This object contains factory methods for each
+ * Java content interface and Java element interface
+ * generated in the real_estate_agency package.
+ * <p>An ObjectFactory allows you to programatically
+ * construct new instances of the Java representation
+ * for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces
+ * and classes representing the binding of schema
+ * type definitions, element declarations and model
+ * groups.  Factory methods for each of these are
  * provided in this class.
- * 
  */
 @XmlRegistry
-public class ObjectFactory {
-
+public class ObjectFactory
+{
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: real_estate_agency
-     * 
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package:
+     * real_estate_agency
      */
-    public ObjectFactory() {
+    public ObjectFactory()
+    {
     }
+
 
     /**
      * Create an instance of {@link GetAgentRequest }
-     * 
      */
-    public GetAgentRequest createGetAgentRequest() {
+    public GetAgentRequest createGetAgentRequest()
+    {
         return new GetAgentRequest();
     }
 
+
     /**
      * Create an instance of {@link GetAgentResponse }
-     * 
      */
-    public GetAgentResponse createGetAgentResponse() {
+    public GetAgentResponse createGetAgentResponse()
+    {
         return new GetAgentResponse();
     }
 
+
     /**
      * Create an instance of {@link Agent }
-     * 
      */
-    public Agent createAgent() {
+    public Agent createAgent()
+    {
         return new Agent();
     }
 

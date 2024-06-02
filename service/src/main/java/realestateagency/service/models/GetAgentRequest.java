@@ -5,8 +5,8 @@
 // Generated on: 2024.06.02 at 01:12:40 PM EEST 
 //
 
-
 package realestateagency.service.models;
+
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;

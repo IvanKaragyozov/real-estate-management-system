@@ -5,5 +5,6 @@
 // Generated on: 2024.06.02 at 01:12:40 PM EEST 
 //
 
-@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://real-estate-agency", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://real-estate-agency",
+                                       elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package realestateagency.service.models;
