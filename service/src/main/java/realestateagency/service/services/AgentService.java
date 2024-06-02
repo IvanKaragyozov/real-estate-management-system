@@ -1,4 +1,4 @@
-package pu.master.realestatemanagementsystem.services;
+package realestateagency.service.services;
 
 
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import pu.master.realestatemanagementsystem.models.entities.Agent;
-import pu.master.realestatemanagementsystem.repositories.AgentRepository;
+import realestateagency.service.models.Agent;
+import realestateagency.service.repositories.AgentRepository;
 
 
 @Service
@@ -22,6 +22,7 @@ public class AgentService
     {
         this.agentRepository = agentRepository;
     }
+
 
     public Agent getAgentByName(final String name)
     {

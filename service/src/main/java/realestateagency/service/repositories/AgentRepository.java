@@ -1,11 +1,14 @@
-package pu.master.realestatemanagementsystem.repositories;
+package realestateagency.service.repositories;
 
 
-import jakarta.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
+
+import jakarta.annotation.PostConstruct;
+
 import org.springframework.stereotype.Repository;
-import pu.master.realestatemanagementsystem.models.entities.Agent;
+
+import realestateagency.service.models.Agent;
 
 
 @Repository
@@ -13,6 +16,7 @@ public class AgentRepository
 {
 
     private final Map<String, Agent> agents = new HashMap<>();
+
 
     @PostConstruct
     public void populateData()
@@ -23,6 +27,7 @@ public class AgentRepository
         agents.put("Mariya", new Agent(4, "Mariya", 24, "0888404501"));
         agents.put("Pesho", new Agent(5, "Pesho", 21, "0885116521"));
     }
+
 
     public Map<String, Agent> getAgents()
     {

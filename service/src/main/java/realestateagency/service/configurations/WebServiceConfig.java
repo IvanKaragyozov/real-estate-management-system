@@ -1,4 +1,4 @@
-package pu.master.realestatemanagementsystem.configurations;
+package realestateagency.service.configurations;
 
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -27,13 +27,13 @@ public class WebServiceConfig extends WsConfigurerAdapter
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
-    @Bean(name = "agent")
+    @Bean(name = "real-estate")
     public DefaultWsdl11Definition defaultWsdl11Definition(final XsdSchema agentSchema)
     {
         final DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setSchema(agentSchema);
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setPortTypeName("AgentServicePort");
+        wsdl11Definition.setPortTypeName("RealEstateAgencyServicePort");
         wsdl11Definition.setTargetNamespace("http://real-estate-agency");
         return wsdl11Definition;
     }
@@ -41,6 +41,6 @@ public class WebServiceConfig extends WsConfigurerAdapter
     @Bean
     public XsdSchema agentSchema()
     {
-        return new SimpleXsdSchema(new ClassPathResource("agents.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("real-estate.xsd"));
     }
 }

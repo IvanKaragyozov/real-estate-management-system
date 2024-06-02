@@ -1,4 +1,4 @@
-package pu.master.realestatemanagementsystem;
+package realestateagency.service;
 
 
 import org.springframework.boot.SpringApplication;
@@ -6,12 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class RealEstateManagementSystemApplication
+public class ServiceApplication
 {
-
     public static void main(String[] args)
     {
-        SpringApplication.run(RealEstateManagementSystemApplication.class, args);
+        SpringApplication.run(ServiceApplication.class);
     }
-
 }
