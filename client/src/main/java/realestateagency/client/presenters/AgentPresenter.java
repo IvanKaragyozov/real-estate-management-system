@@ -18,15 +18,18 @@ public class AgentPresenter
     private final SoapClient soapClient;
 
 
-    public AgentPresenter(SoapClient soapClient)
+    public AgentPresenter(final SoapClient soapClient)
     {
         this.soapClient = soapClient;
     }
 
+
     @Bean
-    CommandLineRunner lookup(AgentPresenter agentPresenter) {
+    public CommandLineRunner lookup(final AgentPresenter agentPresenter)
+    {
         return args -> agentPresenter.present();
     }
+
 
     private void present()
     {
@@ -50,10 +53,10 @@ public class AgentPresenter
             }
         }
         while (!agentName.equalsIgnoreCase("Exit"));
+
         scanner.close();
         System.out.println("Shutting down...");
         System.exit(0);
     }
-
 
 }
