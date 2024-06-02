@@ -1,4 +1,4 @@
-package pu.master.realestatemanagementsystem.endpoints;
+package realestateagency.service.endpoints;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,10 +6,11 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-import pu.master.realestatemanagementsystem.models.entities.Agent;
-import pu.master.realestatemanagementsystem.models.requests.GetAgentRequest;
-import pu.master.realestatemanagementsystem.models.responses.GetAgentResponse;
-import pu.master.realestatemanagementsystem.services.AgentService;
+
+import realestateagency.service.models.Agent;
+import realestateagency.service.models.GetAgentRequest;
+import realestateagency.service.models.GetAgentResponse;
+import realestateagency.service.services.AgentService;
 
 
 @Endpoint
