@@ -1,11 +1,11 @@
 **Real Estate Agency Management System**  
 
-Currently the application has the capability to retieve an agent from the Real Estate Agency by their name.
+Currently the application has the capability to retrieve an agent from the Real Estate Agency by their name.
 
 **SOAP Service Documentation**  
 The service can be started by running the main method located in the 'ServiceApplication' class  
 or by running 'mvn spring-boot:run'.  
-The service is set to run at port:8091
+The service is set to run at port **8091**
 
 **WSDL Extraction**  
 To retrieve the WSDL file from the service, you can use the following URL:
@@ -29,6 +29,6 @@ get-agent-request.xml
 2. Send the request using Postman or similar and set the method to POST,  
 the Content-Type to text/xml and the body to be of type raw XML
 3. Replace the name 'Tony' of your liking. The application will either return you the agent information
-   or tell if no such agent exists.
+   or indicate that no such agent exists.
 
 ![Screenshot](service/src/main/resources/images/get-agent-example-xml.png)
